@@ -14,6 +14,7 @@ from pathlib import Path
 import os
 from datetime import timedelta
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -135,14 +136,15 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': "django_blogapp",
-        "USER": "root",
-        "PASSWORD": "amarillo200",
-        "HOST": "localhost",
-        "PORT": "3306"
+       'ENGINE': 'django.db.backends.postgresql',
+        'NAME': "railway",
+        "USER": "postgres",
+        "PASSWORD": "CXYQ5cqpfdcTUsrbBoqm",
+        "HOST": "containers-us-west-85.railway.app",
+        "PORT": "6100"
     }
 }
+
 
 
 # Password validation
@@ -183,7 +185,7 @@ STATIC_URL = 'static/'
 
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MEDIA_URL = '/media/'
 
